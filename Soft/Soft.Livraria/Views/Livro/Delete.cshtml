@@ -1,0 +1,40 @@
+﻿@model Soft.Models.Models.Livro
+
+@{
+    ViewBag.Title = "Remover Livro";
+}
+
+<h2>Remover</h2>
+
+<h3>Você tem certeza que deseja remover esse livro?</h3>
+<fieldset>
+    <legend>Livro</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Titulo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Titulo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Autor)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Autor)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Situacao)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Situacao)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Voltar para a lista de livros", "Index")
+    </p>
+}

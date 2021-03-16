@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Soft.Livraria.ViewModels.AutorLivros>
+
+@{
+    ViewBag.Title = "Livros por autor";
+}
+
+<link href="Content/themes/base/tabela.css" rel="stylesheet" type="text/css" />
+<div class="table-wrapper">
+    <table class="fl-table">
+        <tr>
+            <th>Autor
+            </th>
+            <th>Qtd
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Autor)
+                </td>
+                <td>
+                    @item.LivrosCount
+                </td>
+            </tr>
+        }
+    </table>
+</div>

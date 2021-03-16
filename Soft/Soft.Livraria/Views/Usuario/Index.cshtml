@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Soft.Models.Models.Usuario>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 style ="font-style:normal; color:black">Usuários</h2>
+<link href="Content/Tabela.css" rel="stylesheet" type="text/css" />
+
+<div class="table-wrapper">
+    <table  class="fl-table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeUsuario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Login)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Senha)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NomeUsuario)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Login)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Senha)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.UsuarioId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.UsuarioId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.UsuarioId })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+<p style="text-align:end">
+    @Html.ActionLink("Criar novo Usuário", "Create")
+</p>

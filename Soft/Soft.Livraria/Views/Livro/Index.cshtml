@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Soft.Models.Models.Livro>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<link href="Content/Tabela.css" rel="stylesheet" type="text/css" />
+
+@using (Html.BeginForm())
+{
+    <div style="margin: 1px 70px 1px;">
+
+        <label>Pesquisar</label>
+        @Html.TextBox("SearchString")
+        <input type="submit" value="Buscar" />
+
+    </div>
+}
+
+<div class="table-wrapper">
+    <table class="fl-table">
+        <tr>
+            <th>
+                @Html.ActionLink("Titulo", "Index", new { sortOrder = ViewBag.NameSortParm })
+            </th>
+            <th>
+                @Html.ActionLink("Autor", "Index", new { sortOrder = ViewBag.NameSortParm })
+            </th>
+            <th>Disponível
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Titulo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Autor)
+                </td>
+                <td style="text-align: center">
+                    @Html.DisplayFor(modelItem => item.Situacao)
+                </td>
+                <td>
+                    @Html.ActionLink("Alterar", "Edit", new { id = item.LivroId }) |
+                    @Html.ActionLink("Meus Livros", "Details", new { id = item.LivroId }) |
+                    @Html.ActionLink("Remover", "Delete", new { id = item.LivroId }) |
+                    @Html.ActionLink("Alugar","Alugar", new { id = item.LivroId })
+                </td>
+            </tr>
+        }
+
+    </table>
+    <p style="text-align: end">
+        <input type="button" value="Inserir um novo livro" onclick="@("window.location.href='" + @Url.Action("Create", "Livro") + "'")    ;" />
+    </p>
+</div>
+

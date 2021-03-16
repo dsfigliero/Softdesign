@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Soft.Models.Models.LivroUsuario>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<link href="Content/Tabela.css" rel="stylesheet" type="text/css" />
+
+@using (Html.BeginForm())
+{
+
+}
+
+<div class="table-wrapper">
+    <table class="fl-table">
+        <tr>
+            <th>
+               Livro
+            </th>
+            <th>
+               Usuario
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LivroId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UsuarioId)
+                </td>
+                <td>
+                    @Html.ActionLink("Devolver", "Delete", new { id = item.LivroUsuarioId })
+                    
+                </td>
+            </tr>
+        }
+
+    </table>
+    
+</div>
