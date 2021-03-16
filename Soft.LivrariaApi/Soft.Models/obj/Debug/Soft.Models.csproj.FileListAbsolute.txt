@@ -1,0 +1,4 @@
+C:\Users\diego\OneDrive\Documentos\Livraria\Soft.LivrariaApi\Soft.Models\bin\Soft.Models.dll
+C:\Users\diego\OneDrive\Documentos\Livraria\Soft.LivrariaApi\Soft.Models\bin\Soft.Models.pdb
+C:\Users\diego\OneDrive\Documentos\Livraria\Soft.LivrariaApi\Soft.Models\obj\Debug\Soft.Models.dll
+C:\Users\diego\OneDrive\Documentos\Livraria\Soft.LivrariaApi\Soft.Models\obj\Debug\Soft.Models.pdb
