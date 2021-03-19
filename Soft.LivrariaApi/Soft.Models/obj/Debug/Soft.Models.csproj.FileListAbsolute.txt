@@ -2,3 +2,10 @@ C:\Users\diego\OneDrive\Documentos\Livraria\Soft.LivrariaApi\Soft.Models\bin\Sof
 C:\Users\diego\OneDrive\Documentos\Livraria\Soft.LivrariaApi\Soft.Models\bin\Soft.Models.pdb
 C:\Users\diego\OneDrive\Documentos\Livraria\Soft.LivrariaApi\Soft.Models\obj\Debug\Soft.Models.dll
 C:\Users\diego\OneDrive\Documentos\Livraria\Soft.LivrariaApi\Soft.Models\obj\Debug\Soft.Models.pdb
+C:\Users\diego\Source\Repos\Softdesign\Soft.LivrariaApi\Soft.Models\bin\Soft.Models.dll.config
+C:\Users\diego\Source\Repos\Softdesign\Soft.LivrariaApi\Soft.Models\bin\Soft.Models.dll
+C:\Users\diego\Source\Repos\Softdesign\Soft.LivrariaApi\Soft.Models\bin\Soft.Models.pdb
+C:\Users\diego\Source\Repos\Softdesign\Soft.LivrariaApi\Soft.Models\obj\Debug\Soft.Models.csprojAssemblyReference.cache
+C:\Users\diego\Source\Repos\Softdesign\Soft.LivrariaApi\Soft.Models\obj\Debug\Soft.Models.csproj.CoreCompileInputs.cache
+C:\Users\diego\Source\Repos\Softdesign\Soft.LivrariaApi\Soft.Models\obj\Debug\Soft.Models.dll
+C:\Users\diego\Source\Repos\Softdesign\Soft.LivrariaApi\Soft.Models\obj\Debug\Soft.Models.pdb
