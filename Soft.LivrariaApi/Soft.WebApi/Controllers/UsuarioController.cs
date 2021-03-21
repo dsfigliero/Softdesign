@@ -8,7 +8,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web;
 using System.Web.Http;
-using Soft.Models.Models;
+using Soft.Modelos;
 using Soft.WebApi.DAL;
 
 namespace Soft.WebApi.Controllers

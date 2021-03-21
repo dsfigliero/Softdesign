@@ -1,0 +1,4 @@
+C:\Users\diego\source\repos\Softdesign\Soft\Soft.Modelos\bin\Debug\Soft.Modelos.dll
+C:\Users\diego\source\repos\Softdesign\Soft\Soft.Modelos\bin\Debug\Soft.Modelos.pdb
+C:\Users\diego\source\repos\Softdesign\Soft\Soft.Modelos\obj\Debug\Soft.Modelos.dll
+C:\Users\diego\source\repos\Softdesign\Soft\Soft.Modelos\obj\Debug\Soft.Modelos.pdb

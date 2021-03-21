@@ -1,0 +1,8 @@
+C:\Users\diego\source\repos\Softdesign\Soft.LivrariaApi\Soft.Models\bin\Debug\netcoreapp3.1\Soft.Models.deps.json
+C:\Users\diego\source\repos\Softdesign\Soft.LivrariaApi\Soft.Models\bin\Debug\netcoreapp3.1\Soft.Models.dll
+C:\Users\diego\source\repos\Softdesign\Soft.LivrariaApi\Soft.Models\bin\Debug\netcoreapp3.1\Soft.Models.pdb
+C:\Users\diego\source\repos\Softdesign\Soft.LivrariaApi\Soft.Models\obj\Debug\netcoreapp3.1\Soft.Models.AssemblyInfoInputs.cache
+C:\Users\diego\source\repos\Softdesign\Soft.LivrariaApi\Soft.Models\obj\Debug\netcoreapp3.1\Soft.Models.AssemblyInfo.cs
+C:\Users\diego\source\repos\Softdesign\Soft.LivrariaApi\Soft.Models\obj\Debug\netcoreapp3.1\Soft.Models.csproj.CoreCompileInputs.cache
+C:\Users\diego\source\repos\Softdesign\Soft.LivrariaApi\Soft.Models\obj\Debug\netcoreapp3.1\Soft.Models.dll
+C:\Users\diego\source\repos\Softdesign\Soft.LivrariaApi\Soft.Models\obj\Debug\netcoreapp3.1\Soft.Models.pdb

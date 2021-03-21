@@ -1,6 +1,6 @@
 namespace Soft.WebApi.Migrations
 {
-    using Soft.Models.Models;
+    using Soft.Modelos;
     using System;
     using System.Collections.Generic;
     using System.Data.Entity;

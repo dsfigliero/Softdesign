@@ -1,22 +1,17 @@
 ﻿
 using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
-
-using Soft.Models.Models;
 using System.Net.Http;
 using System.Web.Security;
+using System.Configuration;
+using Soft.Modelos;
+
 
 namespace Soft.Livraria.Controllers
 {
     public class LoginController : Controller
     {
-        private const string BASE_URL = "http://localhost:57678/api/";
-
+        
         public ActionResult Index()
         {
             FormsAuthentication.SignOut();
@@ -29,7 +24,8 @@ namespace Soft.Livraria.Controllers
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri(BASE_URL);
+                                
+                client.BaseAddress = new Uri(ConfigurationManager.AppSettings.Get("UrlApi").ToString());
 
                 var postTask = client.PostAsJsonAsync<Usuario>("Login/Autenticar", u);
                 postTask.Wait();

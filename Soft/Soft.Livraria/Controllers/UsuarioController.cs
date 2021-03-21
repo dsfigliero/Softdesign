@@ -1,4 +1,5 @@
-﻿using Soft.Models.Models;
+﻿
+using Soft.Modelos;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -22,7 +23,7 @@ namespace Soft.Livraria.Controllers
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri(ConfigurationManager.AppSettings.Get("UrlApi").ToString());
-                var responseTask = client.GetAsync("Usuario");
+                var responseTask = client.GetAsync("Usuario/GetUsuario");
                 responseTask.Wait();
 
                 var result = responseTask.Result;
@@ -60,7 +61,7 @@ namespace Soft.Livraria.Controllers
             {
                 client.BaseAddress = new Uri(ConfigurationManager.AppSettings.Get("UrlApi").ToString());
 
-                var postTask = client.PostAsJsonAsync<Usuario>("Usuario", usuario);
+                var postTask = client.PostAsJsonAsync<Usuario>("Usuario/AddUsuario", usuario);
                 postTask.Wait();
 
                 var result = postTask.Result;
@@ -85,7 +86,7 @@ namespace Soft.Livraria.Controllers
             {
                 client.BaseAddress = new Uri(ConfigurationManager.AppSettings.Get("UrlApi").ToString());
 
-                var responseTask = client.GetAsync("Usuario?id=" + id.ToString());
+                var responseTask = client.GetAsync("Usuario/GetUsuarioId/?id=" + id.ToString());
                 responseTask.Wait();
 
                 var result = responseTask.Result;
@@ -109,7 +110,7 @@ namespace Soft.Livraria.Controllers
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri(ConfigurationManager.AppSettings.Get("UrlApi").ToString());
-                var putTask = client.PostAsJsonAsync<Usuario>("Usuario", usuario);
+                var putTask = client.PostAsJsonAsync<Usuario>("Usuario/EditUsuario", usuario);
                 putTask.Wait();
 
                 var result = putTask.Result;
@@ -131,7 +132,7 @@ namespace Soft.Livraria.Controllers
             {
                 client.BaseAddress = new Uri(ConfigurationManager.AppSettings.Get("UrlApi").ToString());
 
-                var deleteTask = client.DeleteAsync("usuario/" + id.ToString());
+                var deleteTask = client.DeleteAsync("Usuario/DeleteUsuario/?id=" + id.ToString());
                 deleteTask.Wait();
 
                 var result = deleteTask.Result;

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Soft.Models.Models.LivroUsuario>
+﻿@model IEnumerable<LivroUsuario>
 
 @{
     ViewBag.Title = "Index";
@@ -26,10 +26,10 @@
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.LivroId)
+                    @Html.DisplayFor(modelItem => item.Livro.Titulo)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.UsuarioId)
+                    @Html.DisplayFor(modelItem => item.Usuario.NomeUsuario)
                 </td>
                 <td>
                     @Html.ActionLink("Devolver", "Delete", new { id = item.LivroUsuarioId })

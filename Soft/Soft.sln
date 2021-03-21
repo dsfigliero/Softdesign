@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 2012 for Web
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Soft.Livraria", "Soft.Livraria\Soft.Livraria.csproj", "{545E07B2-7960-4585-874F-594D80633D9D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Soft.Modelos", "Soft.Modelos\Soft.Modelos.csproj", "{96CE47C7-CC87-40AB-87B3-C2C2D6B02110}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{545E07B2-7960-4585-874F-594D80633D9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{545E07B2-7960-4585-874F-594D80633D9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{545E07B2-7960-4585-874F-594D80633D9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96CE47C7-CC87-40AB-87B3-C2C2D6B02110}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96CE47C7-CC87-40AB-87B3-C2C2D6B02110}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96CE47C7-CC87-40AB-87B3-C2C2D6B02110}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96CE47C7-CC87-40AB-87B3-C2C2D6B02110}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

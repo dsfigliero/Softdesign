@@ -1,4 +1,5 @@
-﻿using Soft.Models.Models;
+﻿
+using Soft.Modelos;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -21,7 +22,7 @@ namespace Soft.Livraria.Controllers
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri(ConfigurationManager.AppSettings.Get("UrlApi").ToString());
-                var responseTask = client.GetAsync("LivroUsuario");
+                var responseTask = client.GetAsync("LivroUsuario/GetLivroUsuario");
                 responseTask.Wait();
                 var result = responseTask.Result;
                 if (result.IsSuccessStatusCode)
@@ -88,7 +89,7 @@ namespace Soft.Livraria.Controllers
                 livroUsuario.LivroId = id;
                 livroUsuario.UsuarioId = Convert.ToInt32(Session["usuarioLogadoID"].ToString());
 
-                var putTask = client.PostAsJsonAsync<LivroUsuario>("LivroUsuario", livroUsuario);
+                var putTask = client.PostAsJsonAsync<LivroUsuario>("LivroUsuario/EditLivroUsuario", livroUsuario);
                 putTask.Wait();
 
                 var result = putTask.Result;
@@ -112,7 +113,7 @@ namespace Soft.Livraria.Controllers
                 var livroUsuario = new LivroUsuario();
                 livroUsuario.LivroId = livro.LivroId;
                 livroUsuario.UsuarioId = Convert.ToInt32( Session["usuarioLogadoID"].ToString());
-                var putTask = client.PostAsJsonAsync<LivroUsuario>("LivroUsuario", livroUsuario);
+                var putTask = client.PostAsJsonAsync<LivroUsuario>("LivroUsuario/EditLivroUsuario", livroUsuario);
                 putTask.Wait();
 
                 var result = putTask.Result;
@@ -152,7 +153,7 @@ namespace Soft.Livraria.Controllers
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri(ConfigurationManager.AppSettings.Get("UrlApi").ToString());
-                var responselivro = client.GetAsync("Livro/" + id);
+                var responselivro = client.GetAsync("Livro/GetLivroId/?id=" + id);
                 responselivro.Wait();
 
                 var res = responselivro.Result;
@@ -163,7 +164,7 @@ namespace Soft.Livraria.Controllers
                     readTask.Wait();
                     livro = readTask.Result;
                     livro.Situacao = !livro.Situacao;
-                    var postLivro = client.PostAsJsonAsync<Livro>("Livro", livro);
+                    var postLivro = client.PostAsJsonAsync<Livro>("Livro/EditLivro", livro);
                     postLivro.Wait();
                 }
                 else
@@ -179,7 +180,7 @@ namespace Soft.Livraria.Controllers
             {
                 client.BaseAddress = new Uri(ConfigurationManager.AppSettings.Get("UrlApi").ToString());
 
-                var deleteTask = client.DeleteAsync("livrousuario/" + id.ToString());
+                var deleteTask = client.DeleteAsync("livrousuario/DeleteLivroUsuario/?id=" + id.ToString());
                 deleteTask.Wait();
 
                 var result = deleteTask.Result;

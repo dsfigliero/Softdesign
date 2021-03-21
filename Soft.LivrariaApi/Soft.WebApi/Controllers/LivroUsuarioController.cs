@@ -1,4 +1,4 @@
-﻿using Soft.Models.Models;
+﻿using Soft.Modelos;
 using Soft.WebApi.DAL;
 using System;
 using System.Collections.Generic;

@@ -20,6 +20,8 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -40,6 +42,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Soft.Modelos">
+      <HintPath>..\..\Soft\Soft.Modelos\bin\Debug\Soft.Modelos.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
@@ -165,22 +170,9 @@
     <Compile Include="Controllers\LivroUsuarioController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
-    <Compile Include="DAL\UsersContext.cs" />
     <Compile Include="DAL\LivrariaContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202103151942279_InitialCreate.cs" />
-    <Compile Include="Migrations\202103151942279_InitialCreate.Designer.cs">
-      <DependentUpon>202103151942279_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202103160100346_Adicionando_tabelas_users.cs" />
-    <Compile Include="Migrations\202103160100346_Adicionando_tabelas_users.Designer.cs">
-      <DependentUpon>202103160100346_Adicionando_tabelas_users.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202103160409551_AdicionandoRelacaoLivroUsuario.cs" />
-    <Compile Include="Migrations\202103160409551_AdicionandoRelacaoLivroUsuario.Designer.cs">
-      <DependentUpon>202103160409551_AdicionandoRelacaoLivroUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -305,23 +297,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202103151942279_InitialCreate.resx">
-      <DependentUpon>202103151942279_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202103160100346_Adicionando_tabelas_users.resx">
-      <DependentUpon>202103160100346_Adicionando_tabelas_users.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202103160409551_AdicionandoRelacaoLivroUsuario.resx">
-      <DependentUpon>202103160409551_AdicionandoRelacaoLivroUsuario.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Soft.Models\Soft.Models.csproj">
-      <Project>{14a184a7-a798-42ed-9ba7-eb8dbfdc67c8}</Project>
-      <Name>Soft.Models</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
